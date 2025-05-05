@@ -21,6 +21,17 @@ header {
     padding: 1rem 0;
     font-weight: bold;
     font-size:x-large;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+header p {
+    margin: 0;
+}
+
+header img {
+    justify-self: center;
 }
 
 /* Section Styling */
@@ -42,6 +53,10 @@ section p {
 }
 
 /* Links Section */
+#resources-section div {
+    display: flex;
+    justify-content: space-evenly;
+}
 section a {
     display: inline-block;
     margin: 5px 10px;
@@ -92,4 +107,10 @@ section h1, section h2 {
 #contributors-section div p {
     font-size: 0.9rem;
     color: #555;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    padding-top: .5em;
 }
