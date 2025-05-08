@@ -1,7 +1,10 @@
+'''
+Predictions.py uses a DataStream object to collect information from the EEG headset, 
+perform ML predictions on the data, then move the cursor accordingly.
+'''
 from DataStream import *
 from tensorflow import keras
 import numpy as np
-# from DeviceControl.CursorControl import *
 import pyautogui
 
 

@@ -1,3 +1,9 @@
+'''
+DataStream
+A class that creates an object used to collect EEG data from the MQTT broker.
+Contains functions for managing MQTT communications + reading data from the object
+'''
+
 import paho.mqtt.client as mqtt
 import ssl
 import struct       # for retrieving byte data from the device

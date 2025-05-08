@@ -1,20 +1,6 @@
 #include "Collector.h"
 
-// #include <stdio.h>
-// #include <tchar.h>
-// #include <stdlib.h>
-// #include <string>
-// #include <iostream>
 #include <conio.h> //kbhit() for exiting the loop
-
-// #include <time.h>
-// #include <algorithm>
-// #include <functional>
-
-// #include "../iWorxDAQ_64/iwxDAQ.h"
-// #include <sqlite3.h>
-// #include <MQTTClient.h>
-// #include <windows.h>
 
 // constants for file names
 #define LOG_FILE "iworx.log"
@@ -155,7 +141,8 @@ int publishData(MQTTClient client, MQTTClient_message pubmsg, float* sample, int
 		exit(-1);
 	}
 	
-	// printf("Publishing message: "); // debugging
+	// DEBUGGING PRINT STATEMENT
+	// printf("Publishing the message: "); 
 	// for (int i = 0; i < 19; ++i) {
 	// 	printf("%f, ", sample[i]);
 	// }
@@ -187,6 +174,7 @@ int publishSize(MQTTClient client, int size) {
 		MQTTClient_destroy(&client);
 		exit(-1);
 	}
+
 	// printf("Publishing message: %d\n", size); // debugging
 
 	rc = MQTTClient_waitForCompletion(client, token, TIMEOUT);
@@ -195,7 +183,9 @@ int publishSize(MQTTClient client, int size) {
 		MQTTClient_destroy(&client);
 		exit(-1);
 	}
+
 	// printf("Message with delivery token %d delivered\n", token); // debugging
+
 	return rc;
 }
 
@@ -299,7 +289,6 @@ int collectData(MQTTClient client, MQTTClient_message pubmsg, sqlite3 *db, int n
 		There is a delay between when the (iWorx) device is started and when meaningful data is recorded.
 		If the array is full of 0s, wait for data. */
 	do {
-		// Sleep(speed);
 		readData();
 		total_datapoints = num_channels_recorded * num_samples_per_ch;
 	} while(std::all_of(data, data + total_datapoints, [](int x) { return x == 0; }));
