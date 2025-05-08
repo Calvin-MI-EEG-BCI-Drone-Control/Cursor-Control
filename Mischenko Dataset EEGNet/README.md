@@ -1,6 +1,6 @@
 # Mischenko Dataset EEGNet
 
-- This directory contains code used to train the ML model. It is based on the [EEGNet architecture]( https://github.com/vlawhern/arl-eegmodels) and [an online EEG dataset](https://figshare.com/collections/_/3917698) (in which "Mischenko" refers to one of the contributors).
+- This directory contains code used to train the ML model. It is based on the <a href="https://github.com/vlawhern/arl-eegmodels" target="_blank">EEGNet architecture</a> and <a href="https://figshare.com/collections/_/3917698" target="_blank">an online EEG dataset</a> (in which "Mischenko" refers to one of the contributors).
 
 ## Files
 - The notebook (Mischenko-EEGNet.ipynb) contains code used to filter the data and train the model.
