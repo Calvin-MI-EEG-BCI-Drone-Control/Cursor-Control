@@ -114,3 +114,8 @@ section h1, section h2 {
     width: auto;
     padding-top: .5em;
 }
+
+#uml-diagram {
+    display: block;
+    margin: 0 auto;
+}

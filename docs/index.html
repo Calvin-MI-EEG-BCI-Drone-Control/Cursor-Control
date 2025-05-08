@@ -19,23 +19,25 @@
     <section id="vision-section">
         <h1>Vision Statement</h1>
         <p>
-            My project involves the creation of a brain-computer interface that allows a user to control a computer cursor using motor imagery (imagined body movements). 
-            Although the specific task of controlling a cursor using neural signals may not seem practical, this way of interfacing with technology is very significant. 
-            For individuals that cannot interact with technology in a typical manner (because, for example, they are paralyzed or have limited mobility), 
-            a brain-computer interface acts as a new, accessible method for controlling computers since it does not depend on the user’s physical abilities. 
-            With this advantage of brain-computer interfaces in mind, I have chosen to utilize motor imagery rather than physical movement to control the cursor – 
-            so that it could be used by anyone regardless of their motor abilities.
+            My project develops a brain-computer interface (BCI) for controlling a computer cursor using motor imagery (imagined body movements). 
+            Although using neural control may seem niche, this way of interfacing with technology is very significant for individualswith limited mobility or paralysis. 
+            A brain-computer interface is a new, accessible method for controlling computers that does not depend on the user’s physical abilities. 
+            With this advantage of brain-computer interfaces in mind, I have chosen to utilize motor imagery rather than physical movement to control the cursor.
         </p>
         <p>
-            The core of my solution is a machine learning model that infers cursor controls based on the user’s brain activity. 
-            I am recording neural signals from an electroencephalography (EEG) cap and have created a pipeline for processing that data so that it can be used as input for the model. 
-            The outputs of the model will be commands for how the cursor should move. 
+            At this system's core, a machine learning model interprets neural signals from an electroencephalography (EEG) cap and, from that, infers how the cursor should move. 
+            I created a pipeline for recording and processing that data so that it can be used as input for the model. 
+            The outputs of the model are commands for how the cursor should move. 
         </p>
         <p>
-            From the user’s point of view, they will be imagining themselves moving a certain part of their body in order to execute a command for the cursor 
-            (for example, I could imagine moving my right arm and that could cause the cursor to move to the right). This is a control method that has been used for many related works.
+            From the user’s point of view, they imagine moving a part of their body to move the cursor 
+            For example, I could imagine moving my right arm and move the cursor to the right. This is a control method that has been used for many related works.
             Using machine learning, I will be able to classify brain activity as matching certain imagined movements.
         </p>
+    </section>
+    <section id="diagram-section">
+        <h1>System Diagram</h1>
+        <img src="assets/uml.png" id="uml-diagram">
     </section>
     <section id="resources-section">
         <h1>Resources</h1>
